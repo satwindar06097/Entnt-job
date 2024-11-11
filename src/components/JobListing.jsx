@@ -26,7 +26,7 @@ const JobListing = () => {
 
       <Row className="g-4">
         {jobs.map((job) => (
-          <Col xs={12} sm={12} md={12} lg={12} key={job.id}>
+          <Col xs={12} sm={12} md={12} lg={6} key={job.id}>
             <Card
               className="bg-dark text-light shadow-lg p-3"
               onClick={() => handleCardClick(job.id)}
@@ -45,10 +45,9 @@ const JobListing = () => {
                       color: "#5D5DFF",
                       fontWeight: "bold",
                       fontSize: "16px",
-                      marginLeft: "0px",
                     }}
                   >
-                    JobID :- {job.id}
+                    JobID: {job.id}
                   </span>
                 </div>
 
@@ -57,8 +56,6 @@ const JobListing = () => {
                     padding: "5px",
                     borderRadius: "5px",
                     minHeight: "40px",
-                    height: "auto",
-                    overflow: "visible",
                   }}
                 >
                   {job.description}
@@ -72,23 +69,27 @@ const JobListing = () => {
                     marginBottom: "10px",
                   }}
                 >
-                  No of Candidates Applyed :- {getCandidateCount(job.id)}
+                  No of Candidates Applied: {getCandidateCount(job.id)}
                 </div>
 
-                <div className="d-flex justify-content-between mt-3">
-                  <button
-                    style={{ backgroundColor: "#5d5dff" }}
+                {/* Button Section */}
+                <div className="d-flex flex-wrap justify-content-between mt-3">
+                  <Button
+                    style={{
+                      backgroundColor: "#5d5dff",
+                      borderColor: "#5d5dff",
+                      marginBottom: "5px",
+                    }}
                     onClick={(e) => {
                       e.stopPropagation();
                       navigate(`/edit-job/${job.id}`);
                     }}
-                    className="mr-2"
                   >
-                    <span style={{ fontSize: "20px", marginRight: "3px" }}>
-                      <FaRegEdit />
-                    </span>
+                    <FaRegEdit
+                      style={{ fontSize: "18px", marginRight: "5px" }}
+                    />
                     Edit
-                  </button>
+                  </Button>
 
                   <Button
                     variant="danger"
@@ -96,10 +97,11 @@ const JobListing = () => {
                       e.stopPropagation();
                       dispatch(deleteJob(job.id));
                     }}
+                    style={{ marginBottom: "5px" }}
                   >
-                    <span style={{ fontSize: "20px", marginRight: "3px" }}>
-                      <MdFolderDelete />
-                    </span>
+                    <MdFolderDelete
+                      style={{ fontSize: "18px", marginRight: "5px" }}
+                    />
                     Delete
                   </Button>
                 </div>
