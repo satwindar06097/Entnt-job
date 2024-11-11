@@ -7,7 +7,7 @@ A **Job Portal** application built with **React** and **Vite** for managing job 
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/satwindar06097/Entn_AdminJobPortal.git
+git clone https://github.com/satwindar06097/Entnt-job.git
 ```
 
 ### 2. Install dependencies
