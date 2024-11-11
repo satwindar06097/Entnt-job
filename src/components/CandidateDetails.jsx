@@ -60,6 +60,7 @@ const CandidateDetails = () => {
                         fontSize: "0.9rem",
                         padding: "5px 10px",
                         borderRadius: "10px",
+                        backgroundColor: "#5d5dff",
                       }}
                     >
                       {skill}
@@ -76,7 +77,7 @@ const CandidateDetails = () => {
                   href={candidate.resume}
                   target="_blank"
                   rel="noopener noreferrer"
-                  style={{ width: "100%" }}
+                  style={{ width: "100%", backgroundColor: "#5d5dff" }}
                 >
                   Download Resume
                 </button>

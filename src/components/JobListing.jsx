@@ -45,7 +45,7 @@ const JobListing = () => {
                       color: "#5D5DFF",
                       fontWeight: "bold",
                       fontSize: "16px",
-                      marginLeft: "10px",
+                      marginLeft: "0px",
                     }}
                   >
                     JobID :- {job.id}
@@ -54,7 +54,7 @@ const JobListing = () => {
 
                 <Card.Text
                   style={{
-                    padding: "15px",
+                    padding: "5px",
                     borderRadius: "5px",
                     minHeight: "40px",
                     height: "auto",
